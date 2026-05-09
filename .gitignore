@@ -1,0 +1,10 @@
+/target
+**/*.rs.bk
+Cargo.lock.bak
+.DS_Store
+target/
+*.db
+*.db-journal
+.quicli-test/
+.kbcli-test/
+bench-reports/

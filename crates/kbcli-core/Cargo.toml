@@ -1,0 +1,12 @@
+[package]
+name = "kbcli-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Pure domain types for kbcli (Document, Chunk, Filter, Query, Hit)."
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+uuid.workspace = true

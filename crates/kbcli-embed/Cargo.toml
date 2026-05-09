@@ -1,0 +1,22 @@
+[package]
+name = "kbcli-embed"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "EmbeddingRuntime trait, tokenizer + chunker for kbcli."
+
+[dependencies]
+kbcli-core.workspace = true
+async-trait.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+unicode-segmentation.workspace = true
+tracing.workspace = true
+dirs.workspace = true
+tokio = { workspace = true, optional = true }
+
+[features]
+default = []
+
+[dev-dependencies]
+tokio = { workspace = true }

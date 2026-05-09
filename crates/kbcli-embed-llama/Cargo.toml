@@ -1,0 +1,23 @@
+[package]
+name = "kbcli-embed-llama"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "llama.cpp (GGUF) EmbeddingRuntime impl for EmbeddingGemma."
+
+[dependencies]
+kbcli-core.workspace = true
+kbcli-embed.workspace = true
+async-trait.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+tokio = { workspace = true }
+
+llama-cpp-2 = { version = "0.1", optional = true }
+hf-hub      = { version = "0.3", default-features = false, features = ["tokio", "online"], optional = true }
+
+[features]
+default = []
+model   = ["dep:llama-cpp-2", "dep:hf-hub"]
+
+
